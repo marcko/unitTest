@@ -1,14 +1,14 @@
 var fs = require("fs");
 var should = require('should');
 var assert = require("assert");
-var blogfs = require("../api/lib/blogfs");
+var blogfs = require("./lib/blogfs");
 var blogger = new blogfs();
 var created="";
   
 describe('realizara las pruebas de la clase blogfs', function () {
   describe('debe borra archivos creados', function () {
     afterEach(function (done) {
-        var path = "/home/marcko/practicasjs/fs/blogs/";
+        var path = "./";
        fs.unlink(path+created+".json", function(err){   
           if(err) return console.log(err);
           return console.info("deleted");     
