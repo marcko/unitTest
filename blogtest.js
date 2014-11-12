@@ -38,7 +38,18 @@ describe('realizara las pruebas de la clase blogfs', function () {
 
     
   });
+
+   
   });
  
-  
+      it('debe de fallar cuando no se envie los dos parametros', function (done) {
+    var input={
+        title:"hola"
+    }
+
+    blogger.read(input,function(err, file){
+
+      assert.strictEqual(err,null);
+    });
+       });
 });
